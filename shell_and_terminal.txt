@@ -1,0 +1,63 @@
+slide
+https://docs.google.com/presentation/d/1m49ZVSw1Qoy55GWFRpbIyoswnYty1a1o/edit?slide=id.p8#slide=id.p8
+
+CLI
+adalah singkatan dari Command Line Interface
+
+apa itu CLI
+
+CLI (Command Line Interface) adalah antarmuka berbasis teks yang memungkinkan pengguna untuk berinteraksi dengan komputer atau sistem operasi melalui perintah-perintah yang diketikkan.
+
+Shell
+adalah program yg menerima perintah kita kemudian meneruskan perintah tersebut agar bisa di eksekusi oleh sistem
+
+Shell adalah program perantara antara pengguna dan sistem operasi, yang:
+
+Menerima perintah dari pengguna (biasanya dalam bentuk teks),
+
+Meneruskannya ke sistem operasi untuk dieksekusi,
+
+Lalu menampilkan hasilnya kembali ke pengguna.
+
+Shell
+ada yg berbentuk text dan ada yg bentuk nya grafik
+
+
+📌 Contoh Aktivitas Virtual di CLI:
+
+| Kamu Mengetik   | Dunia CLI Merespons                     |
+| --------------- | --------------------------------------- |
+| `ls`            | Menampilkan daftar file dan folder      |
+| `cd Documents`  | Memindahkan kamu ke folder "Documents"  |
+| `mkdir belajar` | Membuat folder bernama "belajar"        |
+| `git status`    | Menampilkan status Git dari proyek kamu |
+
+
+Contoh Shell Populer:
+
+| Nama Shell                          | Sistem Operasi |
+| ----------------------------------- | -------------- |
+| `bash` (Bourne Again Shell)         | Linux, macOS   |
+| `zsh` (Z Shell)                     | Linux, macOS   |
+| `fish` (Friendly Interactive Shell) | Linux, macOS   |
+| `cmd.exe` dan `PowerShell`          | Windows        |
+
+
+Cara kerjanya:
+
+Kamu (User)
+   ↓
+Mengetik perintah di Terminal
+   ↓
+Shell (bash, zsh, cmd, dll)
+   ↓
+Sistem Operasi (kernel)
+   ↓
+Perintah dijalankan, hasil dikirim balik ke Shell
+   ↓
+Kamu lihat hasilnya di layar
+
+
+Terminal emulator adalah aplikasi yang meniru (emulasi) perilaku terminal fisik di komputer modern, sehingga kamu bisa menjalankan CLI (Command Line Interface) dari sistem operasi.
+
+
