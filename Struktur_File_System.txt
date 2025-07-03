@@ -1,0 +1,141 @@
+slide
+https://docs.google.com/presentation/d/1myKyXjt96XzyhahC1rfUaFGjNrzuOfAQ/edit?slide=id.p1#slide=id.p1
+
+📁 Apa itu File System?
+File system (sistem berkas) adalah cara sistem operasi mengatur dan menyimpan data di penyimpanan (seperti harddisk, SSD, atau flashdisk) supaya:
+
+Data bisa dibaca dan ditulis
+
+File dan folder bisa dibuat, dihapus, diatur
+
+Akses ke file bisa dikelola (izin baca/tulis)
+
+🧠 Gampangnya:
+File system itu ibarat peta dan aturan main bagaimana file disimpan di dalam penyimpanan.
+
+
+
+📦 Fungsi Utama File System:
+Membagi ruang penyimpanan menjadi struktur yang bisa dimengerti (file & folder)
+
+Menyimpan metadata (nama file, ukuran, tanggal dibuat, izin akses)
+
+Mengatur hak akses (siapa yang boleh baca, tulis, eksekusi)
+
+Membantu proses navigasi antar folder/file
+
+
+
+📊 Contoh File System:
+
+| File System     | Digunakan di            |
+| --------------- | ----------------------- |
+| **FAT32**       | Flashdisk, Windows lama |
+| **NTFS**        | Windows modern          |
+| **ext4**        | Linux                   |
+| **HFS+ / APFS** | macOS                   |
+
+
+📁 Contoh Struktur File System:
+/
+├── home/
+│   └── rifqi/
+│       ├── Documents/
+│       │   └── catatan.txt
+│       └── Downloads/
+├── etc/
+├── var/
+
+
+
+
+💻 1. Linux – Dunia Direktori Serba “/”
+Struktur Linux itu berbasis akar (/). Semua hal, termasuk harddisk eksternal, ditaruh di bawah root (/).
+
+🔧 Contoh:
+/
+├── bin/          ← program penting (binaries)
+├── home/         ← direktori user
+│   └── rifqi/    ← folder kamu (user “rifqi”)
+│       ├── Documents/
+│       └── Downloads/
+├── etc/          ← file konfigurasi sistem
+├── var/          ← data yang sering berubah (log, cache)
+├── usr/          ← program & library tambahan
+├── tmp/          ← file sementara
+
+
+🧠 Ciri khas:
+
+Terstruktur & modular
+
+Semua dimulai dari satu akar: /
+
+Folder home/ seperti “My Documents” versi Linux
+
+Cocok buat server dan pengembang
+
+
+🪟 2. Windows – Dunia Drive Letter (C:, D:, dst.)
+Windows tidak pakai /, tapi pakai huruf drive, seperti C:\ untuk sistem, D:\ untuk data, dst.
+
+📁 Contoh:
+
+C:\
+├── Program Files\
+├── Users\
+│   └── Rifqi\
+│       ├── Documents\
+│       ├── Downloads\
+├── Windows\
+
+
+🧠 Ciri khas:
+
+Setiap partisi punya hurufnya sendiri (C:, D:)
+
+Users\Rifqi adalah rumah kamu (mirip home/rifqi)
+
+Program Files tempat aplikasi
+
+Windows adalah folder sistem operasi
+
+
+
+
+🍎 3. macOS – Gabungan Rasa Linux + Apple Style
+macOS berbasis Unix, jadi struktur dasarnya mirip Linux, tapi dengan sedikit gaya Apple ✨
+
+🍏 Contoh:
+
+/
+├── Applications/     ← semua aplikasi GUI
+├── Users/
+│   └── rifqi/        ← user folder kamu
+│       ├── Documents/
+│       └── Downloads/
+├── System/           ← komponen inti macOS
+├── Library/          ← resource sistem & app
+├── private/
+├── bin/, etc/, usr/  ← masih ada seperti Linux
+
+
+🧠 Ciri khas:
+
+Masih pakai root /
+
+Folder Users/rifqi adalah rumah user
+
+Ada Applications/ buat aplikasi GUI
+
+Sistem Unix-like, tapi dibungkus elegan ala Appl
+
+
+📊 Tabel Perbandingan Singkat
+
+| Aspek            | Linux                    | Windows                | macOS                   |
+| ---------------- | ------------------------ | ---------------------- | ----------------------- |
+| Akar file system | `/`                      | `C:\`, `D:\`           | `/`                     |
+| Folder user      | `/home/rifqi`            | `C:\Users\Rifqi`       | `/Users/rifqi`          |
+| Tempat app       | `/bin`, `/usr/bin`       | `C:\Program Files`     | `/Applications`         |
+| Gaya struktur    | Modular, open, fleksibel | GUI-heavy, drive-based | Unix core + Apple style |
