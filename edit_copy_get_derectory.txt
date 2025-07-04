@@ -1,0 +1,34 @@
+slide
+https://docs.google.com/presentation/d/1lzAOJhi2cPbd4ldk1JPqpFLfTCPZ-89E/edit?slide=id.p2#slide=id.p2
+
+untuk menyalin menggunakan cp = copy
+Contoh
+cp bab1.md sejarah/bab1.md
+
+utk emastikan ada file yg di overaid
+cp -i bab1.md bab2.md  sejarah
+
+memasukkan directory sejarah ke makalah
+mkdir makalah
+cp -r sejaarah makalah
+
+mv = move berfungsi utk memindahkan 1file dari sebuah folder ke folder yg lain seperti cut lihat
+
+Contoh
+mv bab1.md makalah
+
+mv juga berfungsi utk menamai ulang directory kita
+Contoh
+
+mv sejarah sejarah-baru
+
+
+rm = remove berfungsi utk menghapus file/directory
+Contoh
+rm draft-1.md
+
+nah utk hapus derectory
+
+Contoh
+rm -r draft
+
