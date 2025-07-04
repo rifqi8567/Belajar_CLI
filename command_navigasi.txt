@@ -1,0 +1,58 @@
+slide
+https://docs.google.com/presentation/d/1myKyXjt96XzyhahC1rfUaFGjNrzuOfAQ/edit?slide=id.p1#slide=id.p1
+
+
+.
+├── buku
+│   ├── computer
+│   ├── harry-potter.md
+│   ├── how-to-train-your-dragon.md
+│   └── lord-of-the-rings.md
+├── film
+│   ├── harry-potter.mov
+│   ├── horror
+│   ├── lord-of-the-rings.mov
+│   ├── rumah-sendiri.mov
+│   └── starwars.mov
+
+| Istilah            | Contoh                   | Penjelasan                       |
+| ------------------ | ------------------------ | -------------------------------- |
+| Root directory     | `.`                      | Folder paling atas struktur      |
+| Directory / Folder | `buku`, `film`           | Folder yang berisi file/folder   |
+| File               | `harry-potter.md`        | Dokumen/file yang disimpan       |
+| Absolute path      | `/film/harry-potter.mov` | Jalur lengkap dari root          |
+| Relative path      | `film/harry-potter.mov`  | Jalur dari folder kerja saat ini |
+
+
+| Fungsi                          | Windows CMD (cmd.exe)  | Linux Terminal         | macOS Terminal         | Catatan                                                             |
+| ------------------------------- | ---------------------- | ---------------------- | ---------------------- | ------------------------------------------------------------------- |
+| **Lihat isi folder**            | `dir`                  | `ls`                   | `ls`                   | `ls` di Linux/macOS punya banyak opsi, di CMD `dir` juga punya opsi |
+| **Pindah direktori**            | `cd folder`            | `cd folder`            | `cd folder`            | Sama-sama pakai `cd`                                                |
+| **Kembali satu folder**         | `cd ..`                | `cd ..`                | `cd ..`                | Sama-sama `cd ..`                                                   |
+| **Buat folder baru**            | `mkdir folder`         | `mkdir folder`         | `mkdir folder`         | Sama perintahnya                                                    |
+| **Hapus file**                  | `del filename`         | `rm filename`          | `rm filename`          | Windows `del`, Linux/macOS `rm`                                     |
+| **Hapus folder kosong**         | `rmdir folder`         | `rmdir folder`         | `rmdir folder`         | Sama                                                                |
+| **Hapus folder beserta isinya** | `rmdir /S folder`      | `rm -r folder`         | `rm -r folder`         | Perlu opsi khusus untuk recursive delete                            |
+| **Salin file**                  | `copy source dest`     | `cp source dest`       | `cp source dest`       | `copy` di Windows, `cp` di Unix-like                                |
+| **Pindah atau rename file**     | `move source dest`     | `mv source dest`       | `mv source dest`       | `move` di Windows, `mv` di Linux/macOS                              |
+| **Lihat isi file (text)**       | `type filename`        | `cat filename`         | `cat filename`         | `type` di Windows, `cat` di Linux/macOS                             |
+| **Cari teks dalam file**        | `find "text" filename` | `grep "text" filename` | `grep "text" filename` | Windows `find` vs Unix `grep`                                       |
+| **Clear layar terminal**        | `cls`                  | `clear`                | `clear`                | Perintah berbeda untuk bersihkan layar terminal                     |
+| **Lihat IP Address**            | `ipconfig`             | `ifconfig` / `ip addr` | `ifconfig`             | Linux modern lebih sering pakai `ip addr`                           |
+| **Shutdown komputer**           | `shutdown /s`          | `shutdown -h now`      | `shutdown -h now`      | Command shutdown berbeda masing-masing OS                           |
+
+
+Contoh penggunaan:
+
+Windows CMD:
+dir
+cd Documents
+mkdir Project
+del file.txt
+
+Linux/macOS terminal:
+
+ls
+cd Documents
+mkdir Project
+rm file.txt
