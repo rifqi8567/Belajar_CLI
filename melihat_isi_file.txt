@@ -1,0 +1,59 @@
+| Fungsi                          | Windows CMD (cmd.exe)  | Linux Terminal         | macOS Terminal         | Catatan                                                             |
+| ------------------------------- | ---------------------- | ---------------------- | ---------------------- | ------------------------------------------------------------------- |
+| **Lihat isi folder**            | `dir`                  | `ls`                   | `ls`                   | `ls` di Linux/macOS punya banyak opsi, di CMD `dir` juga punya opsi |
+| **Pindah direktori**            | `cd folder`            | `cd folder`            | `cd folder`            | Sama-sama pakai `cd`                                                |
+| **Kembali satu folder**         | `cd ..`                | `cd ..`                | `cd ..`                | Sama-sama `cd ..`                                                   |
+| **Buat folder baru**            | `mkdir folder`         | `mkdir folder`         | `mkdir folder`         | Sama perintahnya                                                    |
+| **Hapus file**                  | `del filename`         | `rm filename`          | `rm filename`          | Windows `del`, Linux/macOS `rm`                                     |
+| **Hapus folder kosong**         | `rmdir folder`         | `rmdir folder`         | `rmdir folder`         | Sama                                                                |
+| **Hapus folder beserta isinya** | `rmdir /S folder`      | `rm -r folder`         | `rm -r folder`         | Perlu opsi khusus untuk recursive delete                            |
+| **Salin file**                  | `copy source dest`     | `cp source dest`       | `cp source dest`       | `copy` di Windows, `cp` di Unix-like                                |
+| **Pindah atau rename file**     | `move source dest`     | `mv source dest`       | `mv source dest`       | `move` di Windows, `mv` di Linux/macOS                              |
+| **Lihat isi file (text)**       | `type filename`        | `cat filename`         | `cat filename`         | `type` di Windows, `cat` di Linux/macOS                             |
+| **Cari teks dalam file**        | `find "text" filename` | `grep "text" filename` | `grep "text" filename` | Windows `find` vs Unix `grep`                                       |
+| **Clear layar terminal**        | `cls`                  | `clear`                | `clear`                | Perintah berbeda untuk bersihkan layar terminal                     |
+| **Lihat IP Address**            | `ipconfig`             | `ifconfig` / `ip addr` | `ifconfig`             | Linux modern lebih sering pakai `ip addr`                           |
+| **Shutdown komputer**           | `shutdown /s`          | `shutdown -h now`      | `shutdown -h now`      | Command shutdown berbeda masing-masing OS                           |
+
+
+
+🔁 Tabel Perbandingan Perintah tail (UNIX vs Windows)
+
+| Fungsi                            | Linux/macOS (Terminal)    | Windows CMD (Command Prompt)     | Catatan                                                                    |
+| --------------------------------- | ------------------------- | -------------------------------- | -------------------------------------------------------------------------- |
+| Lihat 10 baris terakhir dari file | `tail filename.txt`       | ❌ Tidak tersedia secara default  | Harus pakai alternatif: PowerShell atau software tambahan seperti Git Bash |
+| Lihat N baris terakhir dari file  | `tail -n 20 filename.txt` | ❌ Tidak ada opsi langsung di CMD | PowerShell bisa: `Get-Content filename.txt -Tail 20`                       |
+| Pantau perubahan real-time        | `tail -f filename.txt`    | ❌ Tidak tersedia di CMD          | PowerShell bisa: `Get-Content filename.txt -Wait`                          |
+
+
+✅ Rekomendasi Alternatif di Windows:
+1. Gunakan PowerShell:
+Windows sudah punya PowerShell, dan kamu bisa pakai ini:
+
+Untuk 10 baris terakhir:
+Get-Content filename.txt -Tail 10
+
+
+Untuk real-time monitoring (seperti tail -f):
+Get-Content filename.txt -Wait
+
+2. Gunakan Git Bash (jika kamu install Git):
+Kalau kamu install Git for Windows, biasanya Git Bash juga terinstall. Di situ kamu bisa langsung pakai:
+
+tail filename.txt
+
+
+🔁 Versi cat di Windows (dalam bentuk tabel):
+| Fungsi                      | Linux/macOS (`cat`)         | Windows CMD                   | PowerShell                      | Keterangan                                                              |                                  |
+| --------------------------- | --------------------------- | ----------------------------- | ------------------------------- | ----------------------------------------------------------------------- | -------------------------------- |
+| Tampilkan isi file          | `cat file.txt`              | `type file.txt`               | `Get-Content file.txt`          | `type` di CMD mirip `cat`, PowerShell lebih modern dengan `Get-Content` |                                  |
+| Gabungkan file (concat)     | `cat file1 file2 > out.txt` | `copy /b file1+file2 out.txt` | `(Get-Content f1,f2) > out.txt` | CMD pakai `copy /b`, PowerShell bisa pakai `Get-Content` dengan `>`     |                                  |
+| Tampilkan isi + nomor baris | `cat -n file.txt`           | ❌                             | \`Get-Content file.txt          | ForEach { \$i=0 } { "\$(\$i++) $\_" }\`                                 | Perlu skrip manual di PowerShell |
+
+
+Kesimpulan Ringkas:
+| Perintah `cat`    | CMD              | PowerShell              | Git Bash              |
+| ----------------- | ---------------- | ----------------------- | --------------------- |
+| Didukung langsung | ✅ (pakai `type`) | ✅ (pakai `Get-Content`) | ✅ (sama persis `cat`) |
+
+
